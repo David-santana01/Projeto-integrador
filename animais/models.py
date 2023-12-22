@@ -8,7 +8,8 @@ class Animais(models.Model):
     espécie = models.CharField(max_length= 100)
     raça = models.CharField(max_length=100)
     idade = models.IntegerField()
-    descrição = models.CharField(max_length= 200)
+    descrição = models.CharField(max_length= 200, blank=True)
     tamanho = models.CharField( max_length= 100 )
-
-   ### class Meta: verbose_name = 'Animai'###
+    Cachorro = models.BooleanField( default= False, blank=True )
+    Gato = models.BooleanField( default= False,blank=True )
+    class Meta: verbose_name = 'Animais'
