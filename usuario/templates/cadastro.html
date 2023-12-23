@@ -1,104 +1,56 @@
-{ %extends 'base.html'% }
+{% extends 'base.html' %}
 
+{% block 'titulo' %} Cadastro {% endblock %}
 
+{% block 'conteudo' %}
+<div class=" container">
 
+    <br>
 
+        <div class="row">
 
-
-
-
-
-
-
-
-
-
-<!--DOCTYPE html> 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .registration-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-
-        .registration-container h2 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .registration-form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            margin-bottom: 5px;
-            color: #555;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .form-group button {
-            background-color: #4caf50;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <div class="registration-container">
-        <h2>Registro</h2>
-        <form class="registration-form" action="#" method="post">
-            <div class="form-group">
-                <label for="username">Nome de usuário:</label>
-                <input type="text" id="username" name="username" required>
+            <div class="col-md-4" >
+                <!--esta div esta vazia para centralizar o painel do cadastro -->
             </div>
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+
+            <div style="border: 1px solid black " class="col-md-4" >
+                    <center><h2>Cadastre-se</h2></center>
+
+                    <form method="POST"  action="">
+                        <label class=""> Nome </label>
+                        <input class="form-control" type="text" placeholder="Nome.......">
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+
+
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                              <label for="inputPassword6" class="col-form-label">Password</label>
+                            </div>
+                            <div class="col-auto">
+                              <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                            </div>
+                            <div class="col-auto">
+                              <span id="passwordHelpInline" class="form-text">
+                                Must be 8-20 characters long.
+                              </span>
+                            </div>
+                          </div>
+                          
+                        
+                        <input class="btn btn-info btn-lg" type=" submit" value="Enviar ">
+                    </form>
+
             </div>
-            <div class="form-group">
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required>
+
+            <div class="col-md-4" >
+                <!--esta div esta vazia para centralizar o painel do cadastro -->
             </div>
-            <div class="form-group">
-                <button type="submit">Registrar</button>
-            </div>
-        </form>
-    </div>
-</body>
-</html>
--->
+
+        </div>
+
+</div>
+{% endblock %}
