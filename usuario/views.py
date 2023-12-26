@@ -6,9 +6,7 @@ from hashlib import sha256
 # Create your views here.
 
 def login(request):
-    status = request.GET.get('status')
-    return render(request,'login.html', {'status': status})
-
+    return render(request, 'login.html')
 def cadastro (request):
     status = request.GET.get('status')
     return render(request,'cadastro.html', {'status': status})
@@ -44,14 +42,11 @@ def validar_cadastro(request,):
     except:
         return redirect('/auth/cadastro/?status=4')
 
-
-def validar_login(request):
-    Nome = request.POST.get('nome')
-    Senha = request.POST.get('senha')
-    #Senha = sha256(Senha.encode()).hexdigest()
-    Usuario = usuario.objects.filter(nome = Nome).filter(senha = Senha)
-    return redirect('/animais/home/')
-
+def validar_login(request): 
+    email = request.POST.get('email')
+    senha = request.POST.get('senha')
+    return redirect( '/animais/home/' )
+    
 def sair(request):
     request.session.flush()
     return redirect('/auth/login/')

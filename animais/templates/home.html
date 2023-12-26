@@ -1,3 +1,34 @@
 {% extends 'base.html' %}
 
-{% block 'conteudo' %} test {% endblock %}
+{% block 'conteudo' %}
+
+<div class="container">
+    <!--<h2>Animais para adoção</h2>-->
+    <div class="row">
+         {% for pets in Pets %}
+        <div class="col-md-">
+             
+            <div class="card" style="width: 18rem;">
+                <img src="{{pets.img}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{pets.nome}}</h5>
+                  <p class="card-text">Raça: {{pets.raça}} </p>
+                  <p class="card-text">Idade: {{pets.idade}}</p>
+                  <p class="card-text">Tamanho: {{pets.tamanho}}</p>
+                  <p class="card-text">Descrição: {{pets.descrição}}</p>
+                  <a href="#" class="btn btn-primary">Me adote </a>
+                </div>
+              </div>
+        
+                
+                
+            
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+
+
+
+{% endblock %}
