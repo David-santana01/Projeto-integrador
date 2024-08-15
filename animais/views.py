@@ -6,4 +6,4 @@ from .models import Animais
 
 def home(request):
     pets = Animais.objects.all( )
-    return render(request,'home.html', {'Pets': pets})
+    return render(request,'/home.html', {'Pets': pets})
